@@ -1,0 +1,506 @@
+:root {
+    --blue: #28265b ;
+    --dark-blue : #1B1535 ;
+    --green : #00EB09 ;
+    --white : #fff ;
+    --black : #000 ;
+}
+* {
+    margin : 0;
+    padding : 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Tahoma';
+    
+}
+
+.body {
+    background-color: var(--black);
+    color: var(--white);
+    
+}
+
+header {
+    z-index: 2;
+    text-align: center;
+    background-color: var(--dark-blue);
+    width: 100%;
+    font-weight: bold;
+    padding: 0.5%;
+    top: 0;
+}
+
+/* style untuk slide */
+
+.carousel {
+    margin: auto;
+    position: relative;
+    max-width: 1100px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060c21;
+}
+
+.carousel:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.carousel:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.carousel:before,
+.carousel:after {
+    background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+}
+
+.carousel-inner {
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff ;
+}
+
+
+/* end style slide */
+
+
+/* INI style navbar dan header */
+
+
+.title {
+    color: var(--green);
+    border-bottom: 1px solid var(--white);
+    font-size: 15pt;
+}
+
+.input-search {
+    width: 30%;
+    border: none;
+    border-radius: 0 0 0 20px;
+    padding: 2px;
+}
+
+.input-submit {
+    margin-left: -5px;
+    border: none;
+    border-radius: 0 20px 0 0;
+    padding: 2px;
+    background-color: var(--green);
+    color: var(--blue);
+    width: 5%;
+}
+
+nav {
+    margin-top: flex;
+    padding: 1%;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: var(--white);
+}
+
+nav ul li a:hover {
+    border-bottom : 2px solid var(--white);
+}
+
+
+
+/* ini style overlay */
+
+.overlay {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--dark-blue);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+  
+.popup h2 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover 
+{
+    color: #06D85F;
+}
+
+
+/* END style overlay */
+
+
+/* ini style produik */
+
+
+.content 
+{
+    max-height: 30%;
+    width: 50%;
+    color: white;
+}
+
+.judul-produk {
+    margin-top: 5%;
+}
+
+.harga {
+    color: var(--green);
+}
+
+.link a {
+    color: var(--white);
+}
+
+.link a:hover {
+    color: var(--green);
+}
+
+.pesan {
+    background-color: var(--green);
+    padding: 5%;
+    border-radius: 10px;
+
+}
+
+.pesan:hover {
+    background-color: var(--white);
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.pesan img {
+    width: 30px;
+}
+
+.title-p {
+    margin-top: 5%;
+    margin-left: 60px;
+}
+
+.populer {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.populer img {
+    border-radius: 10px;
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+.title-sa {
+    margin-top: 5%;
+    margin-left: 60px;
+}
+
+.title-sapp {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.title-sapp img {
+    border-radius: 10px;
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+.title-vc {
+    margin-top: 5%;
+    margin-left: 60px;
+}
+
+.title-vcg {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.title-vcg img {
+    border-radius: 10px;
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+/* ini style untuk tampilan mobile */
+
+@media screen and (max-width : 600px) {
+    .carousel {
+        margin-top: 9%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .title-p {
+        padding-top: 2rem;
+        margin-left: 4%;
+    }
+
+    .populer {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .link img {
+        width: 80%;
+    }
+
+    .title-sa {
+        padding-top: 2rem;
+        margin-left: 4%;
+    }
+
+    .title-sapp {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    .title-vc {
+        padding-top: 2rem;
+        margin-left: 4%;
+    }
+
+    .title-vcg {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
+
+
+/* ini style untuk tampilan mobile */
+
+
+/* END style produik */
+
+
+
+/* ini style footer */
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.footer {
+    background-color: var(--dark-blue);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+
+    header {
+        padding-top: 40px;
+    }
+}
+
+.footer .footer-left {
+    width: 30%;
+}
+
+.footer h3 {
+    color: #f5f5f5;
+    margin: 0;
+    padding-bottom: 20px;
+    font-family: Georgia, 'Time New Roman', Times, serif;
+}
+
+.footer .footer-left img {
+    width: 25%;
+    vertical-align: middle;
+}
+
+.footer .footer-left .credit-cards {
+    width: 100%;
+}
+
+.footer .footer-copyright {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 10%;
+}
+
+.footer .footer-center {
+    width: 35%;
+}
+
+.footer .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0px;
+}
+
+.footer .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer .footer-center p a {
+    color: rgb(22, 255, 177);
+    text-decoration: none;
+}
+
+.footer .footer-right {
+    width: 30%;
+}
+
+.footer .footer-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+.footer .footer-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer .footer-media {
+    margin-top: 25px;
+}
+
+.footer .footer-media a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer .footer-media a:hover {
+    background-color: rgb(0, 122, 82);
+}
+
+@media (max-width: 880px) {
+
+    .footer .footer-left,
+    .footer .footer-center,
+    .footer .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .footer .footer-center i {
+        margin-left: 0px;
+    }
+}
